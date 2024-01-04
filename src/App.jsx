@@ -16,7 +16,7 @@ function App() {
           </div>
           <About/>
           <Experience/>
-          <Suspense fallback={<h1>Loading...</h1>}> <Tech/></Suspense>
+          <Suspense fallback={<h4>waiting</h4>}> <Tech/></Suspense>
           <Works/>
           <div className="relative z-0">
               <Contact/>
