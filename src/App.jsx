@@ -1,8 +1,9 @@
 import { BrowserRouter } from "react-router-dom"
-import {About,Contact,Experience,Feedbacks,Navbar,Tech,Works,StarsCanvas} from "./components"
+import {About,Contact,Experience,Feedbacks,Navbar,Works,StarsCanvas} from "./components"
 import { lazy, Suspense } from "react"
 
 const Hero=lazy(()=>import("../src/components/Hero"))
+const Tech=lazy(()=>import("../src/components/Tech"))
 function App() {
 
   return (
@@ -15,7 +16,7 @@ function App() {
           </div>
           <About/>
           <Experience/>
-          <Tech/>
+          <Suspense fallback={<h1>Loading...</h1>}> <Tech/></Suspense>
           <Works/>
           <div className="relative z-0">
               <Contact/>
